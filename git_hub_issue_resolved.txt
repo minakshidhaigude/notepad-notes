@@ -1,0 +1,32 @@
+Reference Link:
+ https://stackoverflow.com/questions/32639393/error-message-authentication-failed-on-the-git-remote
+
+
+
+I believe I have found a solution to this problem. None of the solutions above worked for me. I think the root cause of this issue is that GitHub has ended support for password authentication on August 13, 2021.
+ Instead a personal access token needs to be used.
+
+The steps to solve this issue are as follows:
+
+1.Create a personal access token on GitHub.com. Tutorial here
+Go back to Visual Studio Code and open terminal. Type in the following command with your own
+ user information:
+2. go to developer setting for Personal Access Token
+git remote set-url origin https://<TOKEN>@github.com/<user_name>/<repo_name>.git
+
+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
+
+
+https://github.com/minakshidhaigude/Dec2022.git
+
+ https://github.com/minakshidhaigude/Dec2022.git
+  git remote add origin git@github.com:minakshidhaigude/Dec2022.git
+
+git remote set-url origin https://<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@github.com/minakshidhaigude/Dec2022.git
+
+
+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
+
+
+git remote set-url origin repourl
+git remote -v
